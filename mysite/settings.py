@@ -25,7 +25,7 @@ SECRET_KEY = '2*@(*8dv08q8vbln@%d9=*xz0#ia(@6(u8ioof_#epk(7-ph4f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['thegadgetsbox.com' , '127.0.0.1' , '178.62.125.104' , '10.211.55.4']
 
 
 # Application definition
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -75,8 +75,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'thegadgetsbox',
+        'USER': 'jennifer',
+        'PASSWORD': '1j3s5d6%',
+        'HOST': 'localhost',
+        'PORT': '',
+        'OPTIONS': {
+            'sql_mode': 'traditional',
+        }
     }
 }
 
