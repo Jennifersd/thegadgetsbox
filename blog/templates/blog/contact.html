@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} Contacto Jennifersd  {% endblock %}
+{% block description %} Contacto Jennifersd {% endblock %}
+{% block id %} contact {% endblock %}
+{% block classes %} menu-background {% endblock %}
+
+
+{% block content %}
+<section class="drawer -comments">
+	<div class="blocks-container">
+		<div class="block-comments">
+			<div class="block-comments-content">
+			    <h1>Contacto</h1>
+			    <h2>Rellena el siguiente formulario</h2>
+			    <form method="POST" class="post-form">{% csrf_token %}
+			        {{ form|crispy }}
+			        <button type="submit" class="button-comment">Enviar</button>
+			    </form>
+			</div>
+	    </div>
+    </div>
+</section>
+{% endblock %}
