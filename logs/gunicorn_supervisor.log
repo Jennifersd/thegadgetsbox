@@ -1,0 +1,30 @@
+supervisor: couldn't exec /home/jennifer/thegadgetsbox/myvenv/bin/gunicorn_start: ENOEXEC
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/jennifer/thegadgetsbox/myvenv/bin/gunicorn_start: ENOEXEC
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/jennifer/thegadgetsbox/myvenv/bin/gunicorn_start: ENOEXEC
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/jennifer/thegadgetsbox/myvenv/bin/gunicorn_start: ENOEXEC
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/jennifer/thegadgetsbox/myvenv/bin/gunicorn_start: ENOEXEC
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/jennifer/thegadgetsbox/myvenv/bin/gunicorn_start: ENOEXEC
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/jennifer/thegadgetsbox/myvenv/bin/gunicorn_start: ENOEXEC
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/jennifer/thegadgetsbox/myvenv/bin/gunicorn_start: ENOEXEC
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/jennifer/thegadgetsbox/myvenv/bin/gunicorn_start: ENOEXEC
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/jennifer/thegadgetsbox/myvenv/bin/gunicorn_start: ENOEXEC
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/jennifer/thegadgetsbox/myvenv/bin/gunicorn_start: ENOEXEC
+supervisor: child process was not spawned
+supervisor: couldn't exec /home/jennifer/thegadgetsbox/myvenv/bin/gunicorn_start: ENOEXEC
+supervisor: child process was not spawned
+b'' - - [30/May/2017:23:32:37 +0200] "GET / HTTP/1.0" 500 163390 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+b'' - - [30/May/2017:23:32:39 +0200] "GET / HTTP/1.0" 500 163389 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+b'' - - [30/May/2017:23:33:50 +0200] "GET /contacto HTTP/1.0" 200 5249 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+b'' - - [30/May/2017:23:33:55 +0200] "GET /recursos HTTP/1.0" 200 4021 "http://thegadgetsbox.com/contacto" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+b'' - - [30/May/2017:23:33:56 +0200] "GET /herramientas HTTP/1.0" 200 4026 "http://thegadgetsbox.com/recursos" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
+b'' - - [30/May/2017:23:33:57 +0200] "GET /servicios-web HTTP/1.0" 200 4078 "http://thegadgetsbox.com/herramientas" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36"
