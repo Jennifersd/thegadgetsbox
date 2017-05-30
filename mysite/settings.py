@@ -75,15 +75,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'thegadgetsbox',
-        'USER': 'jennifer',
+        'USER': 'thegadgetsbox',
         'PASSWORD': '1j3s5d6%',
         'HOST': 'localhost',
         'PORT': '',
-        'OPTIONS': {
-            'sql_mode': 'traditional',
-        }
+#        'OPTIONS': {
+#            'sql_mode': 'traditional',
+#        }
     }
 }
 
