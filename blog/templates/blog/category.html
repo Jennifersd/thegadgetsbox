@@ -1,0 +1,99 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ category.name }} | Blog Jennifersd{% endblock %}
+{% block description %}{{ category.name }}{% endblock %}
+{% block id %} category-{{ category.name }} {% endblock %}
+
+{% block content %}
+
+{% for  post in posts|slice:":1" %}
+<section class="blogs -post" style="background-image:url({{ post.image.url }})">
+	<div class="blocks-container">
+		<div class="-post-block-text">
+			<div class="wrapper">
+				<h1>{{ post.title }}</h1>
+				<h2>{{ post.content|truncatewords:25 }}</h2>
+				<div class="list-button-post">
+					<a id="button-header-post" href="{{post.get_absoulte_url}}">Descubre más de este <strong>post</strong></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="block-categories-full">
+		<div class="blocks-container">
+			<h3>Descubrir categorías</h3>
+			<ul class="list-categories">
+			{% for category in categories %}
+		    	<li><a href="/blog/category/{{ category.slug }}">{{ category.name }}</a> </li>
+		   	{% endfor %}
+			</ul>
+		</div>
+	</div>
+</section>
+{% endfor %}
+
+<section class="drawer -post-list">
+	<div class="blocks-container">
+		<div class="ads-google">
+			<div class="ads-google-content">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- Anuncios Categorías | Jennifersd -->
+				<ins class="adsbygoogle"
+				     style="display:block"
+				     data-ad-client="ca-pub-3656409043426681"
+				     data-ad-slot="2077322059"
+				     data-ad-format="auto"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+		</div>
+		
+		<h3>Últimas entradas de {{ category.name }}</h1></h3>
+		<p class="text-blog-list">Descubre las últimas entradas relacionadas con {{ category.name }}. Y no te pierdas el resto de categorías.</p>
+			
+		<div class="content-list-blog">
+			<ul class="list-blog">
+				{% for post in posts %}
+					<li>		
+						<h2><a href="{{post.get_absoulte_url}}">{{ post.title }}</a></h2>
+						<p>{{ post.content|truncatewords:15 }}</p>
+						<small>{{ post.author.get_full_name }}</small>
+						{% if post.image  %}
+							<div class="img-list-blog">
+								<a href="{{post.get_absoulte_url}}">
+									<img src="{{ post.image.url }}">
+								</a>
+							</div>
+						{% endif %}
+						<div class="bottom-list-blog">
+							<div class="categories-list-blog">
+								<a href="{{post.category.get_absoulte_url}}">{{ post.category }}</a>
+							</div>
+							<div class="date-list-blog"> {{ post.published }}</div>
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+			{% include 'blog/paginator.html' with page=posts %}
+			
+			
+		</div>
+		<div class="ads-google">
+			<div class="ads-google-content">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- Anuncio Categorías | Jennifersd -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-3656409043426681"
+			     data-ad-slot="8489808851"
+			     data-ad-format="auto"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+			</div>
+		</div>
+   	</div>
+</section>
+
+{% endblock %}

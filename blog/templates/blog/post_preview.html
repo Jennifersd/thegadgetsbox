@@ -1,0 +1,38 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{{ post.seo_title }}{% endblock %}
+{% block description %}{{ post.seo_description }}{% endblock %}
+
+{% block content %}
+<div class="row">
+	<div class="col-md-8">
+		<div class="alert alert-danger" role="alert">
+			This is a post preview
+		</div>
+		<div class="page-header">
+			<h1>{{ post.title }}</h1>
+		</div>
+		<small>Written by {{ post.author }} on {{ post.published }} in 
+				<a href="{{post.category.get_absoulte_url }}">{{ post.category }}</a></small>
+		{{ post.content|linebreaks }}
+		<hr>
+		<div class="page-header">
+			<h1>Comments<small> Total number of comments: {{ post.comments.count }}</small></h1>
+		</div>
+		
+		<p class="text-center">
+			<button class="btn btn-default" type="button">
+				<a href="{% url 'blog:add_comment' slug=post.slug %}">Leave a Comment</a>
+			</button>
+		</p>
+		{% for comment in post.comments.all %}
+			<div class="panel panel-default">
+				<div class="panel-heading">{{ comment.user }} commented on {{ comment.created }}</div>
+				<div class="panel-body">{{ comment.body }}</div>
+			</div>
+		{% empty %}
+		<p>There is not comments</p>
+		{% endfor %}	
+	</div>	
+</div>		
+{% endblock %}
