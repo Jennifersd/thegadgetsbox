@@ -80,7 +80,7 @@ a{
 }
 
 .header-container h1{
-    background: transparent url('/static/img/logo-jennifersd.svg') no-repeat left center;
+    background: transparent url('/static/img/logo-thegadgetsbox.svg') no-repeat left center;
     background-size: 195px 56.15px;
     -webkit-background-size: 195px 56.15px;
     -moz-background-size: 195px 56.15px;
@@ -151,11 +151,11 @@ a{
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
-    color:#fff;
+    color:#004863;
 }
 
 .site-header.-light a {
-    color: #fff;
+    color: #004863;
 }
 
 .burger-container{
@@ -201,7 +201,7 @@ footer{
 }
 
 .footer-container h1{
-    background: transparent url(/static/img/logo-jennifersd-copy.svg) no-repeat left center;
+    background: transparent url(/static/img/logo-thegadgetsbox.svg) no-repeat left center;
     background-size: 157px 41.15px;
     -webkit-background-size: 157px 41.15px;
     -moz-background-size: 157px 41.15px;
@@ -287,11 +287,10 @@ footer{
 */
 
 .hub .-material {
-    background-color: #47346b;
-    color: #fff;
+    background-color: #fff;
     padding-top: 0;
-	background-image: url(/static/img/bg-header.png);
-    background-position: center -75px, 0 0;
+	background-image: url(/static/img/bg-header-prueba.png);
+    background-position: center 0px, 0 0;
     background-size: 100% auto;
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
@@ -312,42 +311,45 @@ footer{
 
 .wrapper{
 	box-sizing: border-box;
-    padding-left: 24px;
-    top: 50%;
+    top: 42%;
     transform: translateY(-50%);
     position: absolute;
     z-index: 3;
 }
 
 .-material-block-text h1{
-	font-size: 36px;
-	line-height: 32px;
+	font-size: 46px;
+    line-height: 35px;
 	font-weight: 400;
+	text-align:center;
+	color:#004863;
 }
 
 .-material-block-text h2{
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 28px;
-	width: 45%;
-	margin:30px 0px;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 28px;
+    width: 65%;
+    margin: 0px auto;
     -webkit-font-smoothing: antialiased;
+    text-align: center;
+    color: #49bad8;
 }
 
 .list-button-header{
-	float:left;
-	width: 60%;
+	width: 250px;
+    margin: 43px auto 0px auto;
 }
 
 #button-header-blog{
-	float:left;
-	width: auto;	
+	float: left;
+    width: 100%;	
 	color:#fff;
 	-webkit-border-radius: 50px;
 	-moz-border-radius: 50px;
 	border-radius: 50px;
 	background:#ff3569;
-	padding:10px 15px;
+	padding:19px 0px;
 	text-align:center;
 	font-size:18px;
 	margin-right:15px;
@@ -565,7 +567,7 @@ footer{
     color: #fff;
     padding-top: 0;
 	background-image: url(/static/img/bg-header.png);
-    background-position: center -75px, 0 0;
+    background-position: center 0px, 0 0;
     background-size: 100% auto;
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
