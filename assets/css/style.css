@@ -163,7 +163,11 @@ a{
 }
 
 .menu-background .header-wrap{
-	background-color:#47346b;
+	border-bottom: 1px solid #e2f1eb;
+}
+
+.menu-font-color .header-wrap a{
+	color: #fff;
 }
 
 /*
@@ -228,7 +232,7 @@ footer{
     text-indent: 100%;
     overflow: hidden;
     white-space: nowrap;
-    height: 56.15px;
+    height: 60.15px;
     opacity:0;
 }
 
@@ -268,7 +272,7 @@ footer{
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
-    color: #32325d;
+    color: #004863;
 }
 
 
@@ -385,7 +389,7 @@ footer{
 
 .-blog h3 {
 	text-align:center;
-	color:#32325d;
+	color:#004863;
     font-size: 36px;
     line-height: 32px;
     font-weight: 400;
@@ -393,7 +397,7 @@ footer{
 }
 
 .-blog .text-blog-home{
-    color: #6b7c93;
+    color: #49bad8;
     text-align: center;
     font-size: 16px;
     line-height: 22px;
@@ -418,21 +422,25 @@ footer{
 }
 
 .list-blog-home li{
-	-webkit-flex-basis:0;
-    flex-basis: 0;
+	-webkit-flex-basis: 25.4%;
+    flex-basis: 25.4%;
     flex-grow: 6;
     width: 100%;
     position: relative;
     list-style-type:none;
-    margin: 0 80px 0 0;
-	-webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.3);
-	box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.3);
+    margin: 0 80px 50px 0;
+	-webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.3);
 	padding:17px;
 	max-width: 25.4%;
 }
 
 .list-blog-home li:last-child{
+    margin-right: 0;
+}
+
+.list-blog-home li:nth-child(3n) {
     margin-right: 0;
 }
 
@@ -442,16 +450,16 @@ footer{
     font-size: 18px;
     line-height: 20px;
     font-weight: 400;
-    margin-top:5px;
+    margin:5px 0px 12px 0px;
 }
 
 .list-blog-home h2 a{
-	color:#32325d;	
+	color:#004863;	
 }
 
 .list-blog-home p{
 	color:#6b7c93;
-	margin:15px 0px 20px 0px;
+	margin:12px 0px 20px 0px;
 	text-align: left;
     font-size: 15px;
     line-height: 19px;
@@ -486,7 +494,7 @@ footer{
 
 .categories-list-blog-home a{
 	color:#fff;
-	background:#ff3569;
+	background:#63bb7e;
 	font-weight:700;
 	text-transform:uppercase;
 	text-align:center;
@@ -502,7 +510,7 @@ footer{
 .date-list-blog-home{
 	float: right;
 	width: 56%;
-	color: #292e31;
+	color: #004863;
 	font-size: 13px;
 	text-align: right;	
 }
@@ -566,7 +574,7 @@ footer{
 	background-color: #47346b;
     color: #fff;
     padding-top: 0;
-	background-image: url(/static/img/bg-header.png);
+	background-image: url(/static/img/bg-footer-home.png);
     background-position: center 0px, 0 0;
     background-size: 100% auto;
     -webkit-background-size: 100% auto;
@@ -574,16 +582,17 @@ footer{
 }
 
 .content-web{
-	margin-top: 100px;
+	margin-top: 50px;
+	margin-bottom: 40px;
 }
 
 .left-content-web{
-	width:55%;
+	width:53%;
 }
 
 .left-content-web h3{
     font-size: 36px;
-    line-height: 32px;
+    line-height: 37px;
     font-weight: 400;
 }
 
@@ -758,7 +767,7 @@ footer{
 
 .-post-list h3 {
 	text-align:center;
-	color:#32325d;
+	color:#004863;
     font-size: 36px;
     line-height: 32px;
     font-weight: 400;
@@ -766,7 +775,7 @@ footer{
 }
 
 .-post-list .text-blog-list{
-    color: #6b7c93;
+    color: #49bad8;
     text-align: center;
     font-size: 16px;
     line-height: 22px;
@@ -816,11 +825,11 @@ footer{
     font-size: 18px;
     line-height: 20px;
     font-weight: 400;
-    margin-top:5px;
+    margin: 5px 0px 12px 0px;
 }
 
 .list-blog h2 a{
-	color:#32325d;	
+	color:#004863;	
 }
 
 .list-blog p{
@@ -860,7 +869,7 @@ footer{
 
 .categories-list-blog a{
 	color:#fff;
-	background:#ff3569;
+	background:#63bb7e;
 	font-weight:700;
 	text-transform:uppercase;
 	text-align:center;
@@ -876,7 +885,7 @@ footer{
 .date-list-blog{
 	float: right;
 	width: 56%;
-	color: #292e31;
+	color: #004863;
 	font-size: 13px;
 	text-align: right;	
 }
@@ -925,7 +934,7 @@ footer{
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
-    color: #32325d;
+    color: #004863;
 }
 
 .sr-only{
@@ -950,7 +959,7 @@ footer{
 
 .active{
     color: #fff;
-    background: #ff3569;
+    background: #63bb7e;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;

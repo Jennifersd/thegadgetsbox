@@ -89,7 +89,7 @@ def list_of_post(request):
             Q(author__first_name__icontains=query) |
             Q(author__last_name__icontains=query)
             ).distinct()
-    paginator = Paginator(post, 3) #cantidad de post
+    paginator = Paginator(post, 12) #cantidad de post
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)

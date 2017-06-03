@@ -28,7 +28,6 @@
 				{% for post in posts %}
 					<li>		
 						<h2><a href="{{post.get_absoulte_url}}">{{ post.title }}</a></h2>
-						<p>{{ post.content|truncatewords:15 }}</p>
 						<small>{{ post.author.get_full_name }}</small>
 						{% if post.image  %}
 							<div class="img-list-blog-home">
@@ -37,6 +36,7 @@
 								</a>
 							</div>
 						{% endif %}
+						<p>{{ post.content|truncatewords:15 }}</p>
 						<div class="bottom-list-blog-home">
 							<div class="categories-list-blog-home">
 								<a href="{{post.category.get_absoulte_url}}">{{ post.category }}</a>
@@ -46,10 +46,13 @@
 					</li>
 				{% endfor %}
 			</ul>
+			<div class="list-button-header">
+				<a id="button-header-blog" href="/blog">Descubre más en <strong>blog</strong></a>
+			</div>
 		</div>
    	</div>
 </section>
-
+<!-- 
 <section class="drawer -resources">
 	<div class="blocks-container">
 		<h3>Una pequeña colección de recursos</h3>
@@ -61,18 +64,18 @@
 		</div>
    	</div>
 </section>
-
+ -->
 <section class="drawer -web">
 	<div class="blocks-container">
 		<div class="content-web flex">
 			<div class="left-content-web">
-				<h3>¿Cúanto vale la web que quieres?</h3>
-				<p>Qué no te den gato por liebre, todo tiene un precio. Pero cuidado debes tener en cuenta todo lo que necesitas, el tiempo, la tecnología etc ¡Venga no cuesta nada! </p>
-				<a>Descubre cuanto vale la web que <strong>deseas</strong></a>
+				<h3>¿Quieres dejar una opinión, contactar con nosotros?</h3>
+				<p>Si quieres dejarnos una opinión, contactar con nosotros o pedir algún post sobre un producto, no te corte y deja tu mensaje ¡Venga no cuesta nada! </p>
+				<a>Habla con <strong>nosotros</strong></a>
 			</div>
 			<div class="right-content-web">
 				<div>
-					<img src="/static/img/img-web.png"/>
+					
 				</div>
 			</div>
 		</div>

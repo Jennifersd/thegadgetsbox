@@ -3,6 +3,7 @@
 {% block title %} Thegadgetsbox Últimas entradas  {% endblock %}
 {% block description %} Thegadgetsbox últimas entradas de tecnología, innovación etc {% endblock %}
 {% block id %} blog {% endblock %}
+{% block classes %} menu-font-color {% endblock %}
 
 {% block content %}
 {% for  post in posts|slice:":1" %}
@@ -58,7 +59,6 @@
 				{% for post in posts %}
 					<li>		
 						<h2><a href="{{post.get_absoulte_url}}">{{ post.title }}</a></h2>
-						<p>{{ post.content|truncatewords:15 }}</p>
 						<small>{{ post.author.get_full_name }}</small>
 						{% if post.image  %}
 							<div class="img-list-blog">
@@ -67,6 +67,7 @@
 								</a>
 							</div>
 						{% endif %}
+						<p>{{ post.content|truncatewords:15 }}</p>
 						<div class="bottom-list-blog">
 							<div class="categories-list-blog">
 								<a href="{{post.category.get_absoulte_url}}">{{ post.category }}</a>
