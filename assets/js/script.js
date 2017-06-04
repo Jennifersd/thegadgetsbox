@@ -31,6 +31,15 @@ $(document).ready(function(){
 
 	})();
 	
+	// Nav categories Menu
+	
+	(function() {
+		$('.categories-menu > span').click(function() {
+			    $( ".list-categories-menu" ).slideToggle( "slow" );
+		});
+
+	})();
+	
 	// Social fixed scroll
 
 	(function() {

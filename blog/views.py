@@ -14,6 +14,14 @@ from .forms import CommentForm, PostForm, ContactForm
 
 from django.contrib.auth.decorators import login_required
 
+#from django import template
+#register = template.Library()
+
+#@register.inclusion_tag('blog/header.html')
+#def menu_nav_header():
+#    categories = Category.objects.all()
+#    return {'category': categories}
+
 def services_web(request):
     template = 'blog/services/services_web_form.html'
     return render(request, template)

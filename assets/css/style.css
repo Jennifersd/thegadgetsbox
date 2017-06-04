@@ -154,6 +154,28 @@ a{
     color:#004863;
 }
 
+
+.site-nav ._nav-item span {
+    display: inline-block;
+    padding: 20px 12px 21px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+    transition: border-bottom-color .1s ease-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    color:#004863;
+}
+
+._nav-item.categories-menu{
+	position:relative;
+}
+
 .site-header.-light a {
     color: #004863;
 }
@@ -168,6 +190,26 @@ a{
 
 .menu-font-color .header-wrap a{
 	color: #fff;
+}
+
+.menu-font-color .header-wrap span{
+	color: #fff;
+}
+
+.menu-font-color .header-container h1 {
+    background: transparent url(/static/img/logo-thegadgetsbox-copy.svg) no-repeat left center;
+}
+
+.list-categories-menu{
+	display:none;
+	position: absolute;
+    left: 0;
+    padding: 0px;
+    top: 34px;
+}
+
+.list-categories-menu li{
+	display:block !important;
 }
 
 /*
@@ -527,7 +569,7 @@ footer{
 
 .-resources h3 {
 	text-align:center;
-	color:#32325d;
+	color:#004863;
     font-size: 36px;
     line-height: 32px;
     font-weight: 400;
@@ -571,7 +613,7 @@ footer{
 */
 
 .-web{
-	background-color: #47346b;
+	background-color: #c2e6f0;
     color: #fff;
     padding-top: 0;
 	background-image: url(/static/img/bg-footer-home.png);
@@ -651,8 +693,13 @@ footer{
     padding: 40px 0px 0px 0px;
 }
 
+
+.-post .wrapper{
+	top:50%;
+}
+
 .hub .-post {
-    background-color: #47346b;
+    background-color: #c2e6f0;
     color: #fff;
     padding-top: 0;
     background-position: center 0px, 0 0;
@@ -1013,7 +1060,7 @@ footer{
 .social-link h3{
     text-transform:uppercase;
     font-size:14px;
-	color: #32325d;
+	color: #004863;
 }
 
 .social-link ul{
@@ -1044,7 +1091,7 @@ footer{
 
 .block-post-content h2{
     text-align: center;
-    color: #32325d;
+    color: #004863;
     font-size: 36px;
     line-height: 40px;
     font-weight: 400;
@@ -1061,7 +1108,7 @@ footer{
 
 .block-post-content h3{
     text-align: left;
-    color: #32325d;
+    color: #49bad8;
     font-size: 18px;
     line-height: 26px;
     font-weight: 600;
@@ -1094,7 +1141,7 @@ footer{
 
 .block-post-categories a{
     color: #fff;
-    background: #ff3569;
+    background: #63bb7e;
     font-weight: 700;
     text-transform: uppercase;
     text-align: right;
@@ -1148,14 +1195,14 @@ footer{
 }
 
 .author-data a, .author-data span{
-	color:#32325d;
+	color:#004863;
 	font-weight:600;
 }
 
 .author-content{
 	display: inline-block;
 	width:100%;	
-	color: #6b7c93;
+	color: #004863;
     text-align: justify;
     font-size: 16px;
     line-height: 26px;
@@ -1193,7 +1240,7 @@ footer{
 }
 
 .post-comment-title p span{
-    color: #32325d;
+    color: #004863;
     font-weight: 600;	
 }
 
@@ -1244,7 +1291,7 @@ footer{
 }
 
 .post-comment-conten-heading span{
-	color: #32325d;
+	color: #004863;
     font-weight: 600;
 }
 
@@ -1285,7 +1332,7 @@ footer{
 
 .block-comments-content h1 {
     text-align: center;
-    color: #32325d;
+    color: #004863;
     font-size: 36px;
     line-height: 32px;
     font-weight: 400;
@@ -1319,7 +1366,7 @@ footer{
     display: block;
     width: 100%;
     text-align: left;
-    color: #32325d;
+    color: #004863;
     font-size: 18px;
     line-height: 26px;
     font-weight: 600;
@@ -1378,7 +1425,7 @@ footer{
 
 .block-comming-soon-content h1 {
     text-align: center;
-    color: #32325d;
+    color: #004863;
     font-size: 36px;
     line-height: 32px;
     font-weight: 400;
@@ -1386,7 +1433,7 @@ footer{
 }
 
 .block-comming-soon-content h2 {
-	color: #6b7c93;
+	color: #004863;
     text-align: center;
     font-size: 16px;
     line-height: 22px;
@@ -1394,6 +1441,10 @@ footer{
     width: 700px;
     margin: 0px auto;
     letter-spacing: 1px;
+}
+
+.block-comming-soon-content h2 a{
+	color:#004863;
 }
 
 .comming-soon-img{

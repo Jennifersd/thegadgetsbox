@@ -95,7 +95,7 @@ Tablet CSS
 	  height: 1px;
 	  display: block;
 	  position: relative;
-	  background: #FFF;
+	  background: #004863;
 	  -webkit-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 	  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 	  -webkit-transition-delay: 0s;
@@ -120,7 +120,7 @@ Tablet CSS
 	}
 	
 	.header-container ul._nav-items li._nav-item {
-	  border-bottom: 1px solid #614686;
+	  border-bottom: 1px solid #004863;
 	  margin-top: 5px;
 	  -webkit-transform: scale(1.15) translateY(-30px);
 	          transform: scale(1.15) translateY(-30px);
@@ -171,14 +171,27 @@ Tablet CSS
 	  padding:0px 10px;
 	}
 	
+	.header-container ul._nav-items li._nav-item span {
+	  display: block;
+	  position: relative;
+	  color: #FFF;
+	  font-weight: 100;
+	  text-decoration: none;
+	  font-size: 20px;
+      line-height: 2.25;
+	  font-weight: 200;
+	  width: 100%;
+	  padding:0px 10px;
+	}
+	
 	.header-wrap.header-opened{
 		z-index:4 !important;
 	}
 	
 	.header-container.menu-opened {
 	  height: 100%;
-	  background-color: #4a316d;
-	  background: rgba(74, 49, 109, 0.8) !important;
+	  background-color: #004863;
+      background: rgba(0, 72, 99, 0.7) !important;
 	  -webkit-transition: all 0.3s ease-in, background 0.5s ease-in;
 	  transition: all 0.3s ease-in, background 0.5s ease-in;
 	  -webkit-transition-delay: 0.25s;
@@ -780,7 +793,7 @@ Tablet CSS
 	  height: 1px;
 	  display: block;
 	  position: relative;
-	  background: #FFF;
+	  background: #004863;
 	  -webkit-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 	  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 	  -webkit-transition-delay: 0s;
@@ -805,7 +818,7 @@ Tablet CSS
 	}
 	
 	.header-container ul._nav-items li._nav-item {
-	  border-bottom: 1px solid #614686;
+	  border-bottom: 1px solid #004863;
 	  margin-top: 5px;
 	  -webkit-transform: scale(1.15) translateY(-30px);
 	          transform: scale(1.15) translateY(-30px);
@@ -856,14 +869,27 @@ Tablet CSS
 	  padding:0px 10px;
 	}
 	
+	.header-container ul._nav-items li._nav-item span {
+	  display: block;
+	  position: relative;
+	  color: #FFF;
+	  font-weight: 100;
+	  text-decoration: none;
+	  font-size: 20px;
+      line-height: 2.25;
+	  font-weight: 200;
+	  width: 100%;
+	  padding:0px 10px;
+	}
+	
 	.header-wrap.header-opened{
 		z-index:4 !important;
 	}
 	
 	.header-container.menu-opened {
 	  height: 100%;
-	  background-color: #4a316d;
-	  background: rgba(74, 49, 109, 0.8) !important;
+	  background-color: #004863;
+      background: rgba(0, 72, 99, 0.7) !important;
 	  -webkit-transition: all 0.3s ease-in, background 0.5s ease-in;
 	  transition: all 0.3s ease-in, background 0.5s ease-in;
 	  -webkit-transition-delay: 0.25s;
