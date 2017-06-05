@@ -229,8 +229,13 @@ Tablet CSS
 		position:relative !important;
 		border-top: 1px solid #004863;
 		top:0px !important;
+		background:transparent !important;
+		padding:0px !important;
 	}
 	
+	.list-categories-menu li a{
+		padding:0px !important;
+	}
 	
 	.header-wrap.header-opened{
 		z-index:4 !important;
@@ -934,6 +939,12 @@ Tablet CSS
 		position:relative !important;
 		border-top: 1px solid #004863;
 		top:0px !important;
+		background:transparent !important;
+		padding:0px !important;
+	}
+	
+	.list-categories-menu li a{
+		padding:0px !important;
 	}
 	
 	.header-wrap.header-opened{
