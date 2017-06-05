@@ -80,7 +80,7 @@ a{
 }
 
 .header-container h1{
-    background: transparent url('/static/img/logo-jennifersd.svg') no-repeat left center;
+    background: transparent url('/static/img/logo-thegadgetsbox.svg') no-repeat left center;
     background-size: 195px 56.15px;
     -webkit-background-size: 195px 56.15px;
     -moz-background-size: 195px 56.15px;
@@ -151,11 +151,33 @@ a{
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
-    color:#fff;
+    color:#004863;
+}
+
+
+.site-nav ._nav-item span {
+    display: inline-block;
+    padding: 20px 12px 21px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 1;
+    font-weight: 400;
+    transition: border-bottom-color .1s ease-out;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    color:#004863;
+}
+
+._nav-item.categories-menu{
+	position:relative;
 }
 
 .site-header.-light a {
-    color: #fff;
+    color: #004863;
 }
 
 .burger-container{
@@ -163,7 +185,39 @@ a{
 }
 
 .menu-background .header-wrap{
-	background-color:#47346b;
+	border-bottom: 1px solid #e2f1eb;
+}
+
+.menu-font-color .header-wrap a{
+	color: #fff;
+}
+
+.menu-font-color .header-wrap span{
+	color: #fff;
+}
+
+.menu-font-color .list-categories-menu {
+    background: rgba(0, 72, 99, 0.7) !important;
+}
+.menu-font-color .header-container h1 {
+    background: transparent url(/static/img/logo-thegadgetsbox-copy.svg) no-repeat left center;
+}
+
+.list-categories-menu{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 45px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+}
+
+.list-categories-menu li{
+	display:block !important;
+}
+
+.list-categories-menu li a {
+    padding: 7px 12px 8px !important;
 }
 
 /*
@@ -201,7 +255,7 @@ footer{
 }
 
 .footer-container h1{
-    background: transparent url(/static/img/logo-jennifersd-copy.svg) no-repeat left center;
+    background: transparent url(/static/img/logo-thegadgetsbox.svg) no-repeat left center;
     background-size: 157px 41.15px;
     -webkit-background-size: 157px 41.15px;
     -moz-background-size: 157px 41.15px;
@@ -228,7 +282,7 @@ footer{
     text-indent: 100%;
     overflow: hidden;
     white-space: nowrap;
-    height: 56.15px;
+    height: 60.15px;
     opacity:0;
 }
 
@@ -268,7 +322,7 @@ footer{
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
-    color: #32325d;
+    color: #004863;
 }
 
 
@@ -287,11 +341,10 @@ footer{
 */
 
 .hub .-material {
-    background-color: #47346b;
-    color: #fff;
+    background-color: #fff;
     padding-top: 0;
-	background-image: url(/static/img/bg-header.png);
-    background-position: center -75px, 0 0;
+	background-image: url(/static/img/bg-header-prueba.png);
+    background-position: center 0px, 0 0;
     background-size: 100% auto;
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
@@ -312,42 +365,45 @@ footer{
 
 .wrapper{
 	box-sizing: border-box;
-    padding-left: 24px;
-    top: 50%;
+    top: 42%;
     transform: translateY(-50%);
     position: absolute;
-    z-index: 3;
+    /*z-index: 3;*/
 }
 
 .-material-block-text h1{
-	font-size: 36px;
-	line-height: 32px;
+	font-size: 46px;
+    line-height: 35px;
 	font-weight: 400;
+	text-align:center;
+	color:#004863;
 }
 
 .-material-block-text h2{
-	font-size: 18px;
-	font-weight: 400;
-	line-height: 28px;
-	width: 45%;
-	margin:30px 0px;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 28px;
+    width: 65%;
+    margin: 0px auto;
     -webkit-font-smoothing: antialiased;
+    text-align: center;
+    color: #49bad8;
 }
 
 .list-button-header{
-	float:left;
-	width: 60%;
+	width: 250px;
+    margin: 43px auto 0px auto;
 }
 
 #button-header-blog{
-	float:left;
-	width: auto;	
+	float: left;
+    width: 100%;	
 	color:#fff;
 	-webkit-border-radius: 50px;
 	-moz-border-radius: 50px;
 	border-radius: 50px;
 	background:#ff3569;
-	padding:10px 15px;
+	padding:19px 0px;
 	text-align:center;
 	font-size:18px;
 	margin-right:15px;
@@ -383,7 +439,7 @@ footer{
 
 .-blog h3 {
 	text-align:center;
-	color:#32325d;
+	color:#004863;
     font-size: 36px;
     line-height: 32px;
     font-weight: 400;
@@ -391,7 +447,7 @@ footer{
 }
 
 .-blog .text-blog-home{
-    color: #6b7c93;
+    color: #49bad8;
     text-align: center;
     font-size: 16px;
     line-height: 22px;
@@ -416,21 +472,25 @@ footer{
 }
 
 .list-blog-home li{
-	-webkit-flex-basis:0;
-    flex-basis: 0;
+	-webkit-flex-basis: 25.4%;
+    flex-basis: 25.4%;
     flex-grow: 6;
     width: 100%;
     position: relative;
     list-style-type:none;
-    margin: 0 80px 0 0;
-	-webkit-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.3);
-	box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.3);
+    margin: 0 80px 50px 0;
+	-webkit-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.3);
+	box-shadow: 0px 0px 1px 0px rgba(0,0,0,0.3);
 	padding:17px;
 	max-width: 25.4%;
 }
 
 .list-blog-home li:last-child{
+    margin-right: 0;
+}
+
+.list-blog-home li:nth-child(3n) {
     margin-right: 0;
 }
 
@@ -440,16 +500,16 @@ footer{
     font-size: 18px;
     line-height: 20px;
     font-weight: 400;
-    margin-top:5px;
+    margin:5px 0px 12px 0px;
 }
 
 .list-blog-home h2 a{
-	color:#32325d;	
+	color:#004863;	
 }
 
 .list-blog-home p{
 	color:#6b7c93;
-	margin:15px 0px 20px 0px;
+	margin:12px 0px 20px 0px;
 	text-align: left;
     font-size: 15px;
     line-height: 19px;
@@ -484,7 +544,7 @@ footer{
 
 .categories-list-blog-home a{
 	color:#fff;
-	background:#ff3569;
+	background:#63bb7e;
 	font-weight:700;
 	text-transform:uppercase;
 	text-align:center;
@@ -500,7 +560,7 @@ footer{
 .date-list-blog-home{
 	float: right;
 	width: 56%;
-	color: #292e31;
+	color: #004863;
 	font-size: 13px;
 	text-align: right;	
 }
@@ -517,7 +577,7 @@ footer{
 
 .-resources h3 {
 	text-align:center;
-	color:#32325d;
+	color:#004863;
     font-size: 36px;
     line-height: 32px;
     font-weight: 400;
@@ -561,27 +621,28 @@ footer{
 */
 
 .-web{
-	background-color: #47346b;
+	background-color: #c2e6f0;
     color: #fff;
     padding-top: 0;
-	background-image: url(/static/img/bg-header.png);
-    background-position: center -75px, 0 0;
+	background-image: url(/static/img/bg-footer-home.png);
+    background-position: center 0px, 0 0;
     background-size: 100% auto;
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
 }
 
 .content-web{
-	margin-top: 100px;
+	margin-top: 50px;
+	margin-bottom: 40px;
 }
 
 .left-content-web{
-	width:55%;
+	width:53%;
 }
 
 .left-content-web h3{
     font-size: 36px;
-    line-height: 32px;
+    line-height: 37px;
     font-weight: 400;
 }
 
@@ -640,8 +701,13 @@ footer{
     padding: 40px 0px 0px 0px;
 }
 
+
+.-post .wrapper{
+	top:50%;
+}
+
 .hub .-post {
-    background-color: #47346b;
+    background-color: #c2e6f0;
     color: #fff;
     padding-top: 0;
     background-position: center 0px, 0 0;
@@ -701,7 +767,7 @@ footer{
 .block-categories-full{
 	display: inline-block;
 	width:100%;
-    background: rgba(70, 52, 107, 0.38);
+    background: rgba(0, 72, 99, 0.7) !important;
 }
 
 
@@ -756,7 +822,7 @@ footer{
 
 .-post-list h3 {
 	text-align:center;
-	color:#32325d;
+	color:#004863;
     font-size: 36px;
     line-height: 32px;
     font-weight: 400;
@@ -764,7 +830,7 @@ footer{
 }
 
 .-post-list .text-blog-list{
-    color: #6b7c93;
+    color: #49bad8;
     text-align: center;
     font-size: 16px;
     line-height: 22px;
@@ -814,11 +880,11 @@ footer{
     font-size: 18px;
     line-height: 20px;
     font-weight: 400;
-    margin-top:5px;
+    margin: 5px 0px 12px 0px;
 }
 
 .list-blog h2 a{
-	color:#32325d;	
+	color:#004863;	
 }
 
 .list-blog p{
@@ -858,7 +924,7 @@ footer{
 
 .categories-list-blog a{
 	color:#fff;
-	background:#ff3569;
+	background:#63bb7e;
 	font-weight:700;
 	text-transform:uppercase;
 	text-align:center;
@@ -874,7 +940,7 @@ footer{
 .date-list-blog{
 	float: right;
 	width: 56%;
-	color: #292e31;
+	color: #004863;
 	font-size: 13px;
 	text-align: right;	
 }
@@ -923,7 +989,7 @@ footer{
     user-select: none;
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
-    color: #32325d;
+    color: #004863;
 }
 
 .sr-only{
@@ -948,7 +1014,7 @@ footer{
 
 .active{
     color: #fff;
-    background: #ff3569;
+    background: #63bb7e;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
@@ -1002,7 +1068,7 @@ footer{
 .social-link h3{
     text-transform:uppercase;
     font-size:14px;
-	color: #32325d;
+	color: #004863;
 }
 
 .social-link ul{
@@ -1033,7 +1099,7 @@ footer{
 
 .block-post-content h2{
     text-align: center;
-    color: #32325d;
+    color: #004863;
     font-size: 36px;
     line-height: 40px;
     font-weight: 400;
@@ -1050,7 +1116,7 @@ footer{
 
 .block-post-content h3{
     text-align: left;
-    color: #32325d;
+    color: #49bad8;
     font-size: 18px;
     line-height: 26px;
     font-weight: 600;
@@ -1083,7 +1149,7 @@ footer{
 
 .block-post-categories a{
     color: #fff;
-    background: #ff3569;
+    background: #63bb7e;
     font-weight: 700;
     text-transform: uppercase;
     text-align: right;
@@ -1137,14 +1203,14 @@ footer{
 }
 
 .author-data a, .author-data span{
-	color:#32325d;
+	color:#004863;
 	font-weight:600;
 }
 
 .author-content{
 	display: inline-block;
 	width:100%;	
-	color: #6b7c93;
+	color: #004863;
     text-align: justify;
     font-size: 16px;
     line-height: 26px;
@@ -1182,7 +1248,7 @@ footer{
 }
 
 .post-comment-title p span{
-    color: #32325d;
+    color: #004863;
     font-weight: 600;	
 }
 
@@ -1233,7 +1299,7 @@ footer{
 }
 
 .post-comment-conten-heading span{
-	color: #32325d;
+	color: #004863;
     font-weight: 600;
 }
 
@@ -1274,7 +1340,7 @@ footer{
 
 .block-comments-content h1 {
     text-align: center;
-    color: #32325d;
+    color: #004863;
     font-size: 36px;
     line-height: 32px;
     font-weight: 400;
@@ -1308,7 +1374,7 @@ footer{
     display: block;
     width: 100%;
     text-align: left;
-    color: #32325d;
+    color: #004863;
     font-size: 18px;
     line-height: 26px;
     font-weight: 600;
@@ -1367,7 +1433,7 @@ footer{
 
 .block-comming-soon-content h1 {
     text-align: center;
-    color: #32325d;
+    color: #004863;
     font-size: 36px;
     line-height: 32px;
     font-weight: 400;
@@ -1375,7 +1441,7 @@ footer{
 }
 
 .block-comming-soon-content h2 {
-	color: #6b7c93;
+	color: #004863;
     text-align: center;
     font-size: 16px;
     line-height: 22px;
@@ -1383,6 +1449,10 @@ footer{
     width: 700px;
     margin: 0px auto;
     letter-spacing: 1px;
+}
+
+.block-comming-soon-content h2 a{
+	color:#004863;
 }
 
 .comming-soon-img{

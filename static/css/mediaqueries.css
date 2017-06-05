@@ -1,3 +1,44 @@
+@media screen and (min-width: 1801px) and (max-width: 1920px){
+
+	/* Home
+	*/
+	.hub .-material {
+	    background-position: center 32%, 0 0 !important;
+	}
+	
+}
+
+
+@media screen and (min-width: 1601px) and (max-width: 1800px){
+
+	/* Home
+	*/
+	.hub .-material {
+	    background-position: center 24%, 0 0 !important;
+	}
+	
+}
+
+@media screen and (min-width: 1501px) and (max-width: 1600px){
+
+	/* Home
+	*/
+	.hub .-material {
+	    background-position: center 15%, 0 0 !important;
+	}
+	
+}
+
+@media screen and (min-width: 1340px) and (max-width: 1500px){
+
+	/* Home
+	*/
+	.hub .-material {
+	    background-position: center 6%, 0 0 !important;
+	}
+	
+}
+
 /*
 Tablet CSS
 */
@@ -95,7 +136,7 @@ Tablet CSS
 	  height: 1px;
 	  display: block;
 	  position: relative;
-	  background: #FFF;
+	  background: #004863;
 	  -webkit-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 	  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 	  -webkit-transition-delay: 0s;
@@ -120,7 +161,7 @@ Tablet CSS
 	}
 	
 	.header-container ul._nav-items li._nav-item {
-	  border-bottom: 1px solid #614686;
+	  border-bottom: 1px solid #004863;
 	  margin-top: 5px;
 	  -webkit-transform: scale(1.15) translateY(-30px);
 	          transform: scale(1.15) translateY(-30px);
@@ -171,14 +212,39 @@ Tablet CSS
 	  padding:0px 10px;
 	}
 	
+	.header-container ul._nav-items li._nav-item span {
+	  display: block;
+	  position: relative;
+	  color: #FFF;
+	  font-weight: 100;
+	  text-decoration: none;
+	  font-size: 20px;
+      line-height: 2.25;
+	  font-weight: 200;
+	  width: 100%;
+	  padding:0px 10px;
+	}
+	
+	.list-categories-menu{
+		position:relative !important;
+		border-top: 1px solid #004863;
+		top:0px !important;
+		background:transparent !important;
+		padding:0px !important;
+	}
+	
+	.list-categories-menu li a{
+		padding:0px !important;
+	}
+	
 	.header-wrap.header-opened{
 		z-index:4 !important;
 	}
 	
 	.header-container.menu-opened {
 	  height: 100%;
-	  background-color: #4a316d;
-	  background: rgba(74, 49, 109, 0.8) !important;
+	  background-color: #004863;
+      background: rgba(0, 72, 99, 0.7) !important;
 	  -webkit-transition: all 0.3s ease-in, background 0.5s ease-in;
 	  transition: all 0.3s ease-in, background 0.5s ease-in;
 	  -webkit-transition-delay: 0.25s;
@@ -780,7 +846,7 @@ Tablet CSS
 	  height: 1px;
 	  display: block;
 	  position: relative;
-	  background: #FFF;
+	  background: #004863;
 	  -webkit-transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 	  transition: all 0.3s cubic-bezier(0.4, 0.01, 0.165, 0.99);
 	  -webkit-transition-delay: 0s;
@@ -805,7 +871,7 @@ Tablet CSS
 	}
 	
 	.header-container ul._nav-items li._nav-item {
-	  border-bottom: 1px solid #614686;
+	  border-bottom: 1px solid #004863;
 	  margin-top: 5px;
 	  -webkit-transform: scale(1.15) translateY(-30px);
 	          transform: scale(1.15) translateY(-30px);
@@ -856,14 +922,39 @@ Tablet CSS
 	  padding:0px 10px;
 	}
 	
+	.header-container ul._nav-items li._nav-item span {
+	  display: block;
+	  position: relative;
+	  color: #FFF;
+	  font-weight: 100;
+	  text-decoration: none;
+	  font-size: 20px;
+      line-height: 2.25;
+	  font-weight: 200;
+	  width: 100%;
+	  padding:0px 10px;
+	}
+	
+	.list-categories-menu{
+		position:relative !important;
+		border-top: 1px solid #004863;
+		top:0px !important;
+		background:transparent !important;
+		padding:0px !important;
+	}
+	
+	.list-categories-menu li a{
+		padding:0px !important;
+	}
+	
 	.header-wrap.header-opened{
 		z-index:4 !important;
 	}
 	
 	.header-container.menu-opened {
 	  height: 100%;
-	  background-color: #4a316d;
-	  background: rgba(74, 49, 109, 0.8) !important;
+	  background-color: #004863;
+      background: rgba(0, 72, 99, 0.7) !important;
 	  -webkit-transition: all 0.3s ease-in, background 0.5s ease-in;
 	  transition: all 0.3s ease-in, background 0.5s ease-in;
 	  -webkit-transition-delay: 0.25s;
@@ -958,7 +1049,9 @@ Tablet CSS
 	–––––––––––––––––––––––––––––––––––––––––––––––––– */	
 	
 	.hub .-material {
-	    background-position: center 0px, 0 0 !important;
+		background-image: url(/static/img/bg-header-mobile.png) !important;
+	    background-position: center bottom !important;
+	    background-repeat: no-repeat !important;
 	}
 	
 	.wrapper {
@@ -1060,6 +1153,12 @@ Tablet CSS
 	/* Section 4 - Web
 	–––––––––––––––––––––––––––––––––––––––––––––––––– */	
 	
+	.-web {
+	    background-size: 200% auto !important;
+	    -webkit-background-size: 200% auto !important;
+	    -moz-background-size: 200% auto !important;
+	}
+		
 	.content-web{
 		margin-top: 20px !important;
 		display:inline-block !important;

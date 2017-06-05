@@ -196,6 +196,9 @@ a{
 	color: #fff;
 }
 
+.menu-font-color .list-categories-menu {
+    background: rgba(0, 72, 99, 0.7) !important;
+}
 .menu-font-color .header-container h1 {
     background: transparent url(/static/img/logo-thegadgetsbox-copy.svg) no-repeat left center;
 }
@@ -204,7 +207,7 @@ a{
     display: none;
     position: absolute;
     left: 0;
-    top: 40px;
+    top: 45px;
     background: rgba(255, 255, 255, 0.8);
     padding: 10px;
 }
@@ -365,7 +368,7 @@ footer{
     top: 42%;
     transform: translateY(-50%);
     position: absolute;
-    z-index: 3;
+    /*z-index: 3;*/
 }
 
 .-material-block-text h1{
@@ -764,7 +767,7 @@ footer{
 .block-categories-full{
 	display: inline-block;
 	width:100%;
-    background: rgba(70, 52, 107, 0.38);
+    background: rgba(0, 72, 99, 0.7) !important;
 }
 
 
