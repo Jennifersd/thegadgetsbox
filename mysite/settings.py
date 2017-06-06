@@ -25,7 +25,7 @@ SECRET_KEY = '2*@(*8dv08q8vbln@%d9=*xz0#ia(@6(u8ioof_#epk(7-ph4f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['thegadgetsbox.com' , '127.0.0.1' , '178.62.125.104' , '10.211.55.4']
+ALLOWED_HOSTS = ['thegadgetsbox.com' , '127.0.0.1' , '178.62.125.104' , '10.211.55.4' , '10.211.55.5']
 
 
 # Application definition
