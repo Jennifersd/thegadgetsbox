@@ -27,12 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['thegadgetsbox.com' , '127.0.0.1' , '178.62.125.104' , '10.211.55.4' , '10.211.55.5' , '10.211.55.3']
 
-#TEMPLATE_LOADERS = (
-#    'django.template.loaders.filesystem.Loader',
-#    'django.template.loaders.app_directories.Loader',
-#)
-# Application definition
-
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
