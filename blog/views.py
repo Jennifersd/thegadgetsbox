@@ -213,5 +213,3 @@ def delete_post(request, slug):
     post.delete()
     messages.success(request, "Successfully Delete")
     return redirect('blog:list_of_post_backend')
-
-    

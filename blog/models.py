@@ -18,7 +18,7 @@ class Category (models.Model):
         verbose_name = 'category'
         verbose_name_plural = 'categories'
         
-    def get_absoulte_url(self):
+    def get_absolute_url(self):
         return reverse('blog:list_of_post_by_category', args=[self.slug])
         
     def __str__(self):
@@ -60,8 +60,9 @@ class Post(models.Model):
         #image = image.resize(size, Image.ANTIALIAS)
         #image.save(self.photo.path)
   
-    def get_absoulte_url(self):
+    def get_absolute_url(self):
         return reverse('blog:post_detail', args=[self.slug])
+        #return reverse('blog:post_detail', kwargs={'slug':self.slug})
     
     def __str__(self):
         return self.title
