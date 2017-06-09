@@ -87,13 +87,13 @@
 			{{ post.richtextuploads|safe }}
 		</div>
 		<div class="block-post-categories">
-			<a href="{{post.category.get_absoulte_url}}">{{ post.category }}</a>
+			<a href="{{post.category.get_absolute_url}}">{{ post.category }}</a>
 		</div>
 		<div class="block-post-author">
 			<div class="post-author-image"><img src="/static/img/android-icon-192x192.png"/></div>
 			<div class="post-author-data">
 				<div class="author-data">
-					<span>{{ post.author.get_full_name }}</span> Publicado en: {{ post.published }} en <a href="{{post.category.get_absoulte_url}}">{{ post.category }}</a>
+					<span>{{ post.author.get_full_name }}</span> Publicado en: {{ post.published }} en <a href="{{post.category.get_absolute_url}}">{{ post.category }}</a>
 				</div>
 				<div class="author-content">
 					<p>En Thegadgetsbox hablamos de tecnología, diseño, gadgets, accesorios y de las cosas que nos hacen la vida un poco más fácil, divertida y emocionante. No te pierdas mis recomendaciones de productos, reviews y dentro de poco vídeos.</p>

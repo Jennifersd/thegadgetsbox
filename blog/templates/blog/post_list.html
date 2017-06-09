@@ -27,11 +27,11 @@
 			<ul class="list-blog-home">
 				{% for post in posts %}
 					<li>		
-						<h2><a href="{{post.get_absoulte_url}}">{{ post.title }}</a></h2>
+						<h2><a href="{{post.get_absolute_url}}">{{ post.title }}</a></h2>
 						<small>{{ post.author.get_full_name }}</small>
 						{% if post.image  %}
 							<div class="img-list-blog-home">
-								<a href="{{post.get_absoulte_url}}">
+								<a href="{{post.get_absolute_url}}">
 									<img src="{{ post.image.url }}">
 								</a>
 							</div>
@@ -39,7 +39,7 @@
 						<p>{{ post.content|truncatewords:15 }}</p>
 						<div class="bottom-list-blog-home">
 							<div class="categories-list-blog-home">
-								<a href="{{post.category.get_absoulte_url}}">{{ post.category }}</a>
+								<a href="{{post.category.get_absolute_url}}">{{ post.category }}</a>
 							</div>
 							<div class="date-list-blog-home"> {{ post.published }}</div>
 						</div>

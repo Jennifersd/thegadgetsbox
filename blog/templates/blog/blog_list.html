@@ -14,7 +14,7 @@
 				<h1>{{ post.title }}</h1>
 				<h2>{{ post.content|truncatewords:25 }}</h2>
 				<div class="list-button-post">
-					<a id="button-header-post" href="{{post.get_absoulte_url}}">Leer <strong>post</strong></a>
+					<a id="button-header-post" href="{{post.get_absolute_url}}">Leer <strong>post</strong></a>
 				</div>
 			</div>
 		</div>
@@ -58,11 +58,11 @@
 			<ul class="list-blog">
 				{% for post in posts %}
 					<li>		
-						<h2><a href="{{post.get_absoulte_url}}">{{ post.title }}</a></h2>
+						<h2><a href="{{post.get_absolute_url}}">{{ post.title }}</a></h2>
 						<small>{{ post.author.get_full_name }}</small>
 						{% if post.image  %}
 							<div class="img-list-blog">
-								<a href="{{post.get_absoulte_url}}">
+								<a href="{{post.get_absolute_url}}">
 									<img src="{{ post.image.url }}">
 								</a>
 							</div>
@@ -70,7 +70,7 @@
 						<p>{{ post.content|truncatewords:15 }}</p>
 						<div class="bottom-list-blog">
 							<div class="categories-list-blog">
-								<a href="{{post.category.get_absoulte_url}}">{{ post.category }}</a>
+								<a href="{{post.category.get_absolute_url}}">{{ post.category }}</a>
 							</div>
 							<div class="date-list-blog"> {{ post.published }}</div>
 						</div>
