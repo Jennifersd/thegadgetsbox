@@ -5,6 +5,14 @@ from django.conf.urls.static import static
 
 from django.contrib.auth import views
 
+from .sitemap import BlogSitemap
+from django.contrib.sitemaps.views import sitemap
+ 
+
+sitemaps = {
+    'blog': BlogSitemap,
+}
+
 urlpatterns = [
     # Examples:
     # url(r'^$', 'mysite.views.home', name='home'),
@@ -17,6 +25,7 @@ urlpatterns = [
     
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
         
+url(r'^sitemap\.xml$', sitemap , {'sitemaps': sitemaps}),
 
     #url(r'^blog/', include('blog.urls', namespace='blog', app_name='blog')),
 ]
