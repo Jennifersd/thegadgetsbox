@@ -7,7 +7,8 @@ from django.contrib.auth import views
 
 from .sitemap import BlogSitemap, CategorySitemap, StaticSitemap
 from django.contrib.sitemaps.views import sitemap
- 
+
+from django.http import HttpResponse
 
 sitemaps = {
     'blog': BlogSitemap,
@@ -28,8 +29,11 @@ urlpatterns = [
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
         
     url(r'^sitemap\.xml$', sitemap , {'sitemaps': sitemaps}),
+    url(r'^robots.txt', lambda x: HttpResponse("User-Agent: *\nDisallow:", content_type="text/plain"), name="robots_file")
 
     #url(r'^blog/', include('blog.urls', namespace='blog', app_name='blog')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+ 
