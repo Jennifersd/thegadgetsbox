@@ -21,7 +21,7 @@ class CategorySitemap(Sitemap):
         return Category.objects.all()
  
     def lastmod(self, obj):
-        return obj.name
+        return obj.slug
     
 
 
