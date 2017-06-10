@@ -12,6 +12,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 class Category (models.Model):
     name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique=True)
+    #published_categories = models.DateTimeField(default=timezone.now)
     
     class Meta:
         ordering = ('name', )

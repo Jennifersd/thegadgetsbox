@@ -1,6 +1,7 @@
 from django.contrib.sitemaps import Sitemap
 from blog.models import Post, Category
 from django.core.urlresolvers import reverse
+from django.utils import timezone
  
 class BlogSitemap(Sitemap):
     changefreq = "daily"
@@ -21,7 +22,7 @@ class CategorySitemap(Sitemap):
         return Category.objects.all()
  
     def lastmod(self, obj):
-        return obj.slug
+        return timezone.now()
     
 
 
@@ -37,3 +38,6 @@ class StaticSitemap(Sitemap):
     def location(self, item):
         return reverse(item)
     
+    def lastmod(self, obj):
+        return timezone.now()
+   
