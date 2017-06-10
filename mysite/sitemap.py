@@ -1,5 +1,6 @@
 from django.contrib.sitemaps import Sitemap
-from blog.models import Post
+from blog.models import Post, Category
+from django.core.urlresolvers import reverse
  
 class BlogSitemap(Sitemap):
     changefreq = "daily"
@@ -10,3 +11,29 @@ class BlogSitemap(Sitemap):
  
     def lastmod(self, obj):
         return obj.published
+    
+
+class CategorySitemap(Sitemap):
+    changefreq = "daily"
+    priority = 0.5
+ 
+    def items(self):
+        return Category.objects.all()
+ 
+    def lastmod(self, obj):
+        return obj.name
+    
+
+
+class StaticSitemap(Sitemap):
+    """Reverse 'static' views for XML sitemap."""
+    changefreq = "daily"
+    priority = 0.5
+
+    def items(self):
+        # Return list of url names for views to include in sitemap
+        return [ 'blog:post_list', 'blog:blog_list', 'blog:add_contact']
+
+    def location(self, item):
+        return reverse(item)
+    

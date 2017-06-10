@@ -46,7 +46,7 @@ def blog_list(request):
             Q(author__first_name__icontains=query) |
             Q(author__last_name__icontains=query)
             ).distinct()
-    paginator = Paginator(post, 3) #cantidad de post
+    paginator = Paginator(post, 12) #cantidad de post
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)
@@ -73,7 +73,7 @@ def list_of_post_by_category(request, category_slug):
             Q(author__first_name__icontains=query) |
             Q(author__last_name__icontains=query)
             ).distinct()    
-    paginator = Paginator(post, 3)
+    paginator = Paginator(post, 12)
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)
@@ -176,7 +176,7 @@ def new_post(request):
 @login_required
 def list_of_post_backend(request):
     post = Post.objects.all()
-    paginator = Paginator(post, 10)
+    paginator = Paginator(post, 12)
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)
