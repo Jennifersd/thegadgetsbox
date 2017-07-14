@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils import timezone
-#from django.core.urlresolvers import reverse
+from django.core.urlresolvers import reverse
 from django.template.defaultfilters import slugify
 
 from django.contrib.auth.models import User
@@ -44,8 +44,8 @@ class Category (models.Model):
         verbose_name = 'category'
         verbose_name_plural = 'categories'
         
-#    def get_absolute_url(self):
-#        return reverse('blog:list_of_post_by_category', args=[self.slug])
+    def get_absolute_url(self):
+        return reverse('products:list_of_product_by_category', args=[self.slug])
         
     def __str__(self):
         return self.name

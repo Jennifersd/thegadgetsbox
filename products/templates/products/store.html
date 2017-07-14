@@ -1,39 +1,23 @@
 {% extends 'products/base.html' %}
 
-{% block title %} Thegadgetsbox Productos  {% endblock %}
-{% block description %} Thegadgetsbox últimos productos de tecnología, innovación, hogar etc {% endblock %}
-{% block id %} products {% endblock %}
+{% block title %}{{ store.name }} | Thegadgetsbox{% endblock %}
+{% block description %}{{ store.name }}{% endblock %}
+{% block id %} store-{{ store.name }} {% endblock %}
 {% block classes %} menu-background {% endblock %}
 
 {% block content %}
 
 
-<section class="blogs -post">
-	<div class="block-categories-full">
-		<div class="blocks-container">
-			<h3>Descubrir categorías</h3>
-			<ul class="list-categories">
-			{% for category in categories %}
-		    	<li><a href="/blog/category/{{ category.slug }}">{{ category.name }}</a> </li>
-		   	{% endfor %}
-			</ul>
-		</div>
-	</div>
-</section>
-
-
-
 <section class="drawer -post-list">
 	<div class="blocks-container">
-	
 		<div class="ads-google">
 			<div class="ads-google-content">
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- Anuncios Blog | Thegadgetsbox -->
+				<!-- Anuncio Categorias | Thegadgetsbox -->
 				<ins class="adsbygoogle"
 				     style="display:block"
 				     data-ad-client="ca-pub-3656409043426681"
-				     data-ad-slot="8680965252"
+				     data-ad-slot="2634431659"
 				     data-ad-format="auto"></ins>
 				<script>
 				(adsbygoogle = window.adsbygoogle || []).push({});
@@ -41,24 +25,23 @@
 			</div>
 		</div>
 		
-		<h3>Últimas entradas, no te lo pierdas</h3>
-		<p class="text-blog-list">Descubre las últimas entradas, tecnología, fotografía, diseño y mucho más. ¡Hablemos de todo un poco!</p>
-		
-		
+		<h3>Últimas entradas de {{ store.name }}</h1></h3>
+		<p class="text-blog-list">Descubre las últimas entradas relacionadas con {{ store.name }}. Y no te pierdas el resto de categorías.</p>
+			
 		<div class="content-list-blog">
 			<ul class="list-blog">
 				{% for product in products %}
 					<li>		
-						<h2><a href="{{product.url_store}}">{{ product.title }}</a></h2>
+						<h2><a href="{{product.get_absolute_url}}">{{ product.title }}</a></h2>
+						<p>{{ product.content|truncatewords:15 }}</p>
 						<small>{{ product.author.get_full_name }}</small>
 						{% if product.image  %}
 							<div class="img-list-blog">
-								<a href="{{product.url_store}}">
+								<a href="{{product.get_absolute_url}}">
 									<img src="{{ product.image.url }}">
 								</a>
 							</div>
 						{% endif %}
-						<p>{{ product.content|truncatewords:15 }}</p>
 						<div class="bottom-list-blog">
 							<div class="categories-list-blog">
 								<a href="{{product.category.get_absolute_url}}">{{ product.category }}</a>
@@ -69,15 +52,17 @@
 				{% endfor %}
 			</ul>
 			{% include 'products/paginator.html' with page=products %}
+			
+			
 		</div>
 		<div class="ads-google">
 			<div class="ads-google-content">
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- Anuncios Blog 2 | Thegadgetsbox -->
+				<!-- Anuncios Categorias 2 | Thegadgetsbox -->
 				<ins class="adsbygoogle"
 				     style="display:block"
 				     data-ad-client="ca-pub-3656409043426681"
-				     data-ad-slot="1157698453"
+				     data-ad-slot="4111164850"
 				     data-ad-format="auto"></ins>
 				<script>
 				(adsbygoogle = window.adsbygoogle || []).push({});
@@ -87,15 +72,4 @@
    	</div>
 </section>
 
-<section class="-post-social">
-	<div class="social-link-post">
-		<span>Síguenos</span>
-		<ul>
-			<li><a target="_blank" href="https://www.facebook.com/thgadgetsbox/"><img src="/static/img/facebook.png"/></a></li>
-			<li><a target="_blank" href="https://twitter.com/the_gadgetsbox"><img src="/static/img/twitter.png"/></a></li>
-			<li><a target="_blank" href="https://www.instagram.com/thegadgetsbox/"><img src="/static/img/instagram.png"/></a></li>
-		</ul>
-	</div>
-</section>
-
-{% endblock content %}
+{% endblock %}
