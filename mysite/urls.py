@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'^accounts/login/$', views.login, name='login'),
     url(r'^accounts/logout/$', views.logout, name='logout', kwargs={'next_page': '/'}),
     url(r'', include('blog.urls', namespace='blog', app_name='blog')),
+    
     url(r'^productos/', include('products.urls', namespace='products', app_name='products')),
     
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
