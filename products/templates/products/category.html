@@ -8,16 +8,44 @@
 {% block content %}
 
 
-<section class="drawer -post-list">
+<section class="drawer -intro-product">
 	<div class="blocks-container">
+		<div class="block-text-intro-product">
+			<h1>Productos en la categoría {{ category.name }}</h1>
+			<h2>Descubre los productos de {{ category.name }}</h2>
+			<div class="button-products">
+				<a href="#products">Ver todos <strong>los productos</strong></a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="-product-category">
+		<div class="blocks-container">
+			<h3>Descubrir otras categorías</h3>
+		</div>
+		<ul class="scrollmenu">
+		{% for category in categories %}
+			<li><a href="/productos/category/{{ category.slug }}">
+			<img src="/static/image/{{ category.icon }}"/>
+			<span>{{ category.name }}</span>
+			</a> </li>
+		{% endfor %}
+		</ul>
+</section>
+
+
+<section id="products" class="products -product-list">
+	<div class="blocks-container">
+	
 		<div class="ads-google">
 			<div class="ads-google-content">
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- Anuncio Categorias | Thegadgetsbox -->
+				<!-- Anuncios Blog | Thegadgetsbox -->
 				<ins class="adsbygoogle"
 				     style="display:block"
 				     data-ad-client="ca-pub-3656409043426681"
-				     data-ad-slot="2634431659"
+				     data-ad-slot="8680965252"
 				     data-ad-format="auto"></ins>
 				<script>
 				(adsbygoogle = window.adsbygoogle || []).push({});
@@ -25,44 +53,72 @@
 			</div>
 		</div>
 		
-		<h3>Últimas entradas de {{ category.name }}</h1></h3>
-		<p class="text-blog-list">Descubre las últimas entradas relacionadas con {{ category.name }}. Y no te pierdas el resto de categorías.</p>
-			
-		<div class="content-list-blog">
-			<ul class="list-blog">
+		<h3>Productos {{ category.name }}</h3>
+		<div class="stores">
+			<span>Filtrar por tienda:</span>
+			<ul class="store-list">
+			{% for store in stores %}
+				<li><a href="/productos/store/{{ store.slug }}">{{ store.name }}</a> </li>
+			{% endfor %}
+			</ul>
+		</div>
+		<div class="content-list-product">
+			<ul class="list-product">
 				{% for product in products %}
-					<li>		
-						<h2><a href="{{product.get_absolute_url}}">{{ product.title }}</a></h2>
-						<p>{{ product.content|truncatewords:15 }}</p>
-						<small>{{ product.author.get_full_name }}</small>
-						{% if product.image  %}
-							<div class="img-list-blog">
-								<a href="{{product.get_absolute_url}}">
-									<img src="{{ product.image.url }}">
+					<li>
+						<div class="top-list-product">
+							<div class="store-product">
+								<span>{{ product.store }}</span>
+							</div>
+							{% if product.url_video  %}
+							<div class="video-product">
+								<a href="{{product.url_video}}">
+									<img class="nohover-video" src="/static/img/play-video.png"/>
+									<img class="hover-video" src="/static/img/play-video-hover.png"/>
+									
+								</a>
+							</div>
+							{% endif %}
+						</div>
+								
+						<div class="titles-list-product">
+							<h2><a href="{{product.url_store}}">{{ product.title }}</a></h2>
+							<h4><a href="{{product.url_store}}">{{ product.subtitle }}</a></h4>
+							<div class="code-product">Código descuento : <span>{{ product.code }}</span></div>
+							<small>{{ product.author.get_full_name }}</small>
+						</div>
+						{% if product.image_product  %}
+							<div class="img-list-product">
+								<a href="{{product.url_store}}">
+									<img src="{{ product.image_product.url }}">
 								</a>
 							</div>
 						{% endif %}
-						<div class="bottom-list-blog">
-							<div class="categories-list-blog">
+						<p>{{ product.content|truncatewords:15 }}</p>
+						<div class="bottom-list-product">
+							<div class="categories-list-product">
 								<a href="{{product.category.get_absolute_url}}">{{ product.category }}</a>
 							</div>
-							<div class="date-list-blog"> {{ product.published }}</div>
+							<div class="price-list-product">
+								<div class="price"><span>{{ product.price }}€</span></div>
+								<div class="old-price"><span>{{ product.oldprice }}€</span></div>
+							</div>
+							<div style="display:none;" class="date-list-product"> {{ product.published }}</div>
 						</div>
 					</li>
 				{% endfor %}
 			</ul>
 			{% include 'products/paginator.html' with page=products %}
-			
-			
 		</div>
+		
 		<div class="ads-google">
 			<div class="ads-google-content">
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- Anuncios Categorias 2 | Thegadgetsbox -->
+				<!-- Anuncios Blog 2 | Thegadgetsbox -->
 				<ins class="adsbygoogle"
 				     style="display:block"
 				     data-ad-client="ca-pub-3656409043426681"
-				     data-ad-slot="4111164850"
+				     data-ad-slot="1157698453"
 				     data-ad-format="auto"></ins>
 				<script>
 				(adsbygoogle = window.adsbygoogle || []).push({});
@@ -72,4 +128,15 @@
    	</div>
 </section>
 
-{% endblock %}
+<section class="-post-social">
+	<div class="social-link-post">
+		<span>Síguenos</span>
+		<ul>
+			<li><a target="_blank" href="https://www.facebook.com/thgadgetsbox/"><img src="/static/img/facebook.png"/></a></li>
+			<li><a target="_blank" href="https://twitter.com/the_gadgetsbox"><img src="/static/img/twitter.png"/></a></li>
+			<li><a target="_blank" href="https://www.instagram.com/thegadgetsbox/"><img src="/static/img/instagram.png"/></a></li>
+		</ul>
+	</div>
+</section>
+
+{% endblock content %}

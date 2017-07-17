@@ -23,15 +23,15 @@ class Store (models.Model):
         verbose_name = 'store'
         verbose_name_plural = 'stores'
         
-#    def get_absolute_url(self):
-#        return reverse('blog:list_of_post_by_shop', args=[self.slug])
+    def get_absolute_url(self):
+        return reverse('products:list_of_product_by_store', args=[self.slug])
         
     def __str__(self):
         return self.name
         
    
 
-class Category (models.Model):
+class ProductsCategory (models.Model):
     name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique=True)
     image = models.ImageField(null=True, blank=True)
@@ -63,7 +63,8 @@ class Product(models.Model):
     image_product = models.ImageField(null=True, blank=True)
     
     url_store = models.CharField(max_length=250, blank=True)
-    category = models.ForeignKey(Category)
+    url_video = models.CharField(max_length=250, blank=True)
+    category = models.ForeignKey(ProductsCategory)
     store = models.ForeignKey(Store)
     
     code = models.CharField(max_length=250, blank=True)

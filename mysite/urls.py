@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 
 from django.contrib.auth import views
 
-from .sitemap import BlogSitemap, CategorySitemap, StaticSitemap
+from .sitemap import BlogSitemap, CategorySitemap, StaticSitemap, CategoryProductsSitemap, StoreSitemap
 from django.contrib.sitemaps.views import sitemap
 
 from django.http import HttpResponse
@@ -13,6 +13,8 @@ from django.http import HttpResponse
 sitemaps = {
     'blog': BlogSitemap,
     'categories' : CategorySitemap,
+    'products categories' : CategoryProductsSitemap,
+    'stores' : StoreSitemap,
     'static': StaticSitemap,
 }
 
