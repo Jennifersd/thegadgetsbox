@@ -1738,6 +1738,17 @@ footer{
     background-color: #49bad8;
 }
 
+.scrollmenu li:nth-child(17) a{
+    background-color: #ff3569;
+}
+
+.scrollmenu li:nth-child(18) a{
+    background-color: #ffab28;
+}
+
+
+
+
 .scrollmenu li a img{
     width: 30px;
     margin-bottom: 20px;
