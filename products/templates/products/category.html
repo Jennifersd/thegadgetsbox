@@ -84,7 +84,9 @@
 						<div class="titles-list-product">
 							<h2><a target="_blank" href="{{product.url_store}}">{{ product.title }}</a></h2>
 							<h4><a target="_blank" href="{{product.url_store}}">{{ product.subtitle }}</a></h4>
+							{% if product.code  %}
 							<div class="code-product">Código descuento : <span>{{ product.code }}</span></div>
+							{% endif %}
 							<small>{{ product.author.get_full_name }}</small>
 						</div>
 						{% if product.image_product  %}
@@ -100,8 +102,12 @@
 								<a href="{{product.category.get_absolute_url}}">{{ product.category }}</a>
 							</div>
 							<div class="price-list-product">
-								<div class="price"><span>{{ product.price }}€</span></div>
-								<div class="old-price"><span>{{ product.oldprice }}€</span></div>
+								{% if product.price  %}
+									<div class="price"><span>{{ product.price }}€</span></div>
+								{% endif %}
+								{% if product.oldprice  %}
+									<div class="old-price"><span>{{ product.oldprice }}€</span></div>
+								{% endif %}
 							</div>
 							<div style="display:none;" class="date-list-product"> {{ product.published }}</div>
 						</div>
