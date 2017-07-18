@@ -1,0 +1,66 @@
+<div style="display:none;" class="header-admin">
+	<nav>
+		<ul>
+			{% if user.is_authenticated %}
+				<li class="_nav-item">
+				    <a href="{% url 'blog:new_post' %}" >Nuevo post</a>
+				</li>
+				<li class="_nav-item"><a href="{% url 'blog:list_of_post_backend' %}">Listado de post</a></li>
+				<li class="_nav-item"><a>Hello {{ user.username }}</a></li>
+				<li class="_nav-item">
+					<a href="{% url 'logout' %}">Log out</a>
+				</li>
+				{% else %}
+				<li class="_nav-item">
+				    <a href="{% url 'login' %}">Log in</a>
+				</li>
+			{% endif %}
+		</ul>
+	</nav>
+</div>
+<header class="header-wrap">
+	<div class="header-container">
+		<h1><a href="/">Thegadgetsbox</a></h1>
+		<div class="burger-container">
+	      <div id="burger">
+	        <div class="bar topBar"></div>
+	        <div class="bar btmBar"></div>
+	      </div>
+	    </div>
+		<nav class="site-nav">
+			<ul class="_nav-items">
+				<li class="_nav-item"><a href="/">Inicio</a></li>
+				<li class="_nav-item"><a href="/blog">Últimas noticias</a></li>
+				<li class="_nav-item"><a href="/productos">Productos y descuentos</a></li>
+				<li class="_nav-item categories-menu">
+					<span>Categorías de productos</span>
+					<ul class="list-categories-menu">
+						<li class="_nav-item"><a href="/productos/category/accesorios">Accesorios</a></li>
+			    		<li class="_nav-item"><a href="/productos/category/smartphones">Smartphones</a></li>
+			    		<li class="_nav-item"><a href="/productos/category/tablets">Tablets</a></li>
+			    		<li class="_nav-item"><a href="/productos/category/ordenadores">Ordenadores</a></li>
+			    		<li class="_nav-item"><a href="/productos/category/juguetes">Juguetes</a></li>
+			    		<li class="_nav-item"><a href="/productos/category/hogar">Hogar</a></li>
+			    		<li class="_nav-item"><a href="/productos/category/cocina">Cocina</a></li>
+			    		<li class="_nav-item"><a href="/productos/category/decoracion">Decoración</a></li>
+			    		<li class="_nav-item"><a href="/productos/category/viajes">Viajes</a></li>
+			    		<li class="_nav-item"><a href="/productos/category/gamers">Gamers</a></li>
+			    		<li class="_nav-item"><a href="/productos/category/smartwatches">Smartwatches</a></li>
+			    		<li class="_nav-item"><a href="/productos/category/deporte">Deporte</a></li>
+			    		<li class="_nav-item"><a href="/productos/category/fotografia">Fotografía</a></li>
+			    		<li class="_nav-item"><a href="/productos/category/crowdfunding">Crowdfunding</a></li>
+			    		<li class="_nav-item"><a href="/productos/category/audio">Audio</a></li>
+			    		<li class="_nav-item"><a href="/productos/category/aplicaciones">Aplicaciones</a></li>			    		
+			    	</ul>
+				</li>
+				<li class="_nav-item"><a href="/contacto">Contacto</a>
+				<li>
+		   		</li>
+			</ul>
+		</nav>
+		
+	</div>
+</header>
+
+
+

@@ -1,0 +1,141 @@
+{% extends 'products/base.html' %}
+
+{% block title %} Thegadgetsbox Productos  {% endblock %}
+{% block description %} Thegadgetsbox últimos productos de tecnología, innovación, hogar etc {% endblock %}
+{% block id %} products {% endblock %}
+{% block classes %} menu-background {% endblock %}
+
+{% block content %}
+
+<section class="drawer -intro-product">
+	<div class="blocks-container">
+		<div class="block-text-intro-product">
+			<h1>Productos tecnológicos, gadgets, diseño, hogar y mucho más</h1>
+			<h2>Thegadgetsbox es la guía definitiva para compradores de gadgets, tecnología, accesorios, artículos de lujo e ideas creativas.</h2>
+			<div class="button-products">
+				<a href="#products">Descubre productos y <strong>descuentos</strong></a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="-product-category">
+		<div class="blocks-container">
+			<h3>Descubrir categorías</h3>
+		</div>
+		<ul class="scrollmenu">
+		{% for category in categories %}
+			<li><a href="/productos/category/{{ category.slug }}">
+			<img src="/static/image/{{ category.icon }}"/>
+			<span>{{ category.name }}</span>
+			</a> </li>
+		{% endfor %}
+		</ul>
+</section>
+
+
+<section id="products" class="products -product-list">
+	<div class="blocks-container">
+	
+		<div class="ads-google">
+			<div class="ads-google-content">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- Anuncios Blog | Thegadgetsbox -->
+				<ins class="adsbygoogle"
+				     style="display:block"
+				     data-ad-client="ca-pub-3656409043426681"
+				     data-ad-slot="8680965252"
+				     data-ad-format="auto"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+		</div>
+		
+		<h3>Productos</h3>
+		<div class="stores">
+			<span>Filtrar por tienda:</span>
+			<ul class="store-list">
+			{% for store in stores %}
+				<li><a href="/productos/store/{{ store.slug }}">{{ store.name }}</a> </li>
+			{% endfor %}
+			</ul>
+		</div>
+		<div class="content-list-product">
+			<ul class="list-product">
+				{% for product in products %}
+					<li>
+						<div class="top-list-product">
+							<div class="store-product">
+								<span>{{ product.store }}</span>
+							</div>
+							{% if product.url_video  %}
+							<div class="video-product">
+								<a target="_blank" href="{{product.url_video}}">
+									<img class="nohover-video" src="/static/img/play-video.png"/>
+									<img class="hover-video" src="/static/img/play-video-hover.png"/>
+									
+								</a>
+							</div>
+							{% endif %}
+						</div>
+								
+						<div class="titles-list-product">
+							<h2><a target="_blank" href="{{product.url_store}}">{{ product.title }}</a></h2>
+							<h4><a target="_blank" href="{{product.url_store}}">{{ product.subtitle }}</a></h4>
+							<div class="code-product">Código descuento : <span>{{ product.code }}</span></div>
+							<small>{{ product.author.get_full_name }}</small>
+						</div>
+						{% if product.image_product  %}
+							<div class="img-list-product">
+								<a target="_blank" href="{{product.url_store}}">
+									<img src="{{ product.image_product.url }}">
+								</a>
+							</div>
+						{% endif %}
+						<p>{{ product.content|truncatewords:15 }}</p>
+						<div class="bottom-list-product">
+							<div class="categories-list-product">
+								<a href="{{product.category.get_absolute_url}}">{{ product.category }}</a>
+							</div>
+							<div class="price-list-product">
+								<div class="price"><span>{{ product.price }}€</span></div>
+								<div class="old-price"><span>{{ product.oldprice }}€</span></div>
+							</div>
+							<div style="display:none;" class="date-list-product"> {{ product.published }}</div>
+						</div>
+					</li>
+				{% endfor %}
+			</ul>
+			{% include 'products/paginator.html' with page=products %}
+		</div>
+		
+		<div class="ads-google">
+			<div class="ads-google-content">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- Anuncios Blog 2 | Thegadgetsbox -->
+				<ins class="adsbygoogle"
+				     style="display:block"
+				     data-ad-client="ca-pub-3656409043426681"
+				     data-ad-slot="1157698453"
+				     data-ad-format="auto"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+		</div>
+   	</div>
+</section>
+
+<section class="-post-social">
+	<div class="social-link-post">
+		<span>Síguenos</span>
+		<ul>
+			<li><a target="_blank" href="https://www.facebook.com/thgadgetsbox/"><img src="/static/img/facebook.png"/></a></li>
+			<li><a target="_blank" href="https://twitter.com/the_gadgetsbox"><img src="/static/img/twitter.png"/></a></li>
+			<li><a target="_blank" href="https://www.instagram.com/thegadgetsbox/"><img src="/static/img/instagram.png"/></a></li>
+		</ul>
+	</div>
+</section>
+
+{% endblock content %}

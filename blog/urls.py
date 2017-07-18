@@ -13,6 +13,8 @@ urlpatterns = [
     url(r'^backend/(?P<slug>[-\w]+)/edit/$', views.edit_post, name='edit_post'),
     url(r'^backend/(?P<slug>[-\w]+)/delete/$', views.delete_post, name='delete_post'),
     
+    
+    
     url(r'^contacto$', views.add_contact, name='add_contact'),
     url(r'^recursos$', views.list_of_post_resource, name='list_of_post_resource'),
     url(r'^herramientas', views.list_of_post_tools, name='list_of_post_tools'),

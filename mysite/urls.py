@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 
 from django.contrib.auth import views
 
-from .sitemap import BlogSitemap, CategorySitemap, StaticSitemap
+from .sitemap import BlogSitemap, CategorySitemap, StaticSitemap, CategoryProductsSitemap, StoreSitemap
 from django.contrib.sitemaps.views import sitemap
 
 from django.http import HttpResponse
@@ -13,6 +13,8 @@ from django.http import HttpResponse
 sitemaps = {
     'blog': BlogSitemap,
     'categories' : CategorySitemap,
+    'products categories' : CategoryProductsSitemap,
+    'stores' : StoreSitemap,
     'static': StaticSitemap,
 }
 
@@ -25,6 +27,8 @@ urlpatterns = [
     url(r'^accounts/login/$', views.login, name='login'),
     url(r'^accounts/logout/$', views.logout, name='logout', kwargs={'next_page': '/'}),
     url(r'', include('blog.urls', namespace='blog', app_name='blog')),
+    
+    url(r'^productos/', include('products.urls', namespace='products', app_name='products')),
     
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
         

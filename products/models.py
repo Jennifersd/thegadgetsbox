@@ -9,9 +9,34 @@ from django.contrib.auth.models import User
 from ckeditor_uploader.fields import RichTextUploadingField
 
 
-class Category (models.Model):
+
+class Store (models.Model):
     name = models.CharField(max_length=250)
     slug = models.SlugField(max_length=250, unique=True)
+    image = models.ImageField(null=True, blank=True)
+    icon = models.ImageField(null=True, blank=True)
+    description = models.TextField(blank=True)
+    #published_categories = models.DateTimeField(default=timezone.now)
+    
+    class Meta:
+        ordering = ('name', )
+        verbose_name = 'store'
+        verbose_name_plural = 'stores'
+        
+    def get_absolute_url(self):
+        return reverse('products:list_of_product_by_store', args=[self.slug])
+        
+    def __str__(self):
+        return self.name
+        
+   
+
+class ProductsCategory (models.Model):
+    name = models.CharField(max_length=250)
+    slug = models.SlugField(max_length=250, unique=True)
+    image = models.ImageField(null=True, blank=True)
+    icon = models.ImageField(null=True, blank=True)
+    description = models.TextField(blank=True)
     #published_categories = models.DateTimeField(default=timezone.now)
     
     class Meta:
@@ -20,13 +45,13 @@ class Category (models.Model):
         verbose_name_plural = 'categories'
         
     def get_absolute_url(self):
-        return reverse('blog:list_of_post_by_category', args=[self.slug])
+        return reverse('products:list_of_product_by_category', args=[self.slug])
         
     def __str__(self):
         return self.name
         
     
-class Post(models.Model):
+class Product(models.Model):
   
     STATUS_CHOICES = (
         ('draft', 'Draft'),
@@ -34,16 +59,25 @@ class Post(models.Model):
     )
     richtextuploads = RichTextUploadingField(config_name='awesome_ckeditor', blank=True)
     #image = models.FileField(null=True, blank=True)
-    image = models.ImageField(null=True, blank=True, height_field='height_field', width_field='width_field')
-    height_field = models.IntegerField(default=0)
-    width_field = models.IntegerField(default=0)
-    category = models.ForeignKey(Category)
+    image = models.ImageField(null=True, blank=True)
+    image_product = models.ImageField(null=True, blank=True)
+    
+    url_store = models.CharField(max_length=250, blank=True)
+    url_video = models.CharField(max_length=250, blank=True)
+    category = models.ForeignKey(ProductsCategory)
+    store = models.ForeignKey(Store)
+    
+    code = models.CharField(max_length=250, blank=True)
     title = models.CharField(max_length=250)
+    subtitle = models.CharField(max_length=250)
+    more_prices = models.BooleanField(default=False)
+    price = models.IntegerField()
+    oldprice = models.IntegerField(null=True)
     slug = models.SlugField(max_length=250, unique=True)
     content = models.TextField()
     seo_title = models.CharField(max_length=250)
     seo_description = models.CharField(max_length=250)
-    author = models.ForeignKey(User, related_name='blog_posts')
+    author = models.ForeignKey(User)
     published = models.DateTimeField(default=timezone.now)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
@@ -54,43 +88,17 @@ class Post(models.Model):
   
     def save(self, *args, **kwargs):
         self.slug = slugify(self.title)
-        super(Post, self).save(*args, **kwargs)
+        super(Product, self).save(*args, **kwargs)
         #image = Image.open(self.photo)
         #(width, height) = image.size     
         #size = ( 0, 0)
         #image = image.resize(size, Image.ANTIALIAS)
         #image.save(self.photo.path)
   
-    def get_absolute_url(self):
-        return reverse('blog:post_detail', args=[self.slug])
-        #return reverse('blog:post_detail', kwargs={'slug':self.slug})
+   # def get_absolute_url(self):
+    #    return reverse('blog:post_detail', args=[self.slug])
     
     def __str__(self):
         return self.title
     
-    
-    
-class Comment (models.Model):
-    post = models.ForeignKey(Post, related_name='comments')
-    user = models.CharField(max_length=250)
-    email = models.EmailField()
-    body = models.TextField()
-    created = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
-    
-    def approved(self):
-        self.approved = True
-        self.save()
-    
-    def __str__(self):
-        return self.user
-
- 
-class Contact (models.Model):
-    email_contact = models.CharField(max_length=250)
-    subjet_contact = models.CharField(max_length=250)
-    content_contact = models.TextField()
-    created_contact = models.DateTimeField(auto_now_add=True)
-    
-    def __str__(self):
-        return self.subjet_contact
+  
