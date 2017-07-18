@@ -1751,6 +1751,10 @@ footer{
     margin-top: 10px;
 }
 
+.scrollmenu::-webkit-scrollbar {
+    display: none;
+}
+
 /* Section Product list
 */
 

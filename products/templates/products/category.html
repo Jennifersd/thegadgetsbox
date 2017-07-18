@@ -82,14 +82,14 @@
 						</div>
 								
 						<div class="titles-list-product">
-							<h2><a href="{{product.url_store}}">{{ product.title }}</a></h2>
-							<h4><a href="{{product.url_store}}">{{ product.subtitle }}</a></h4>
+							<h2><a target="_blank" href="{{product.url_store}}">{{ product.title }}</a></h2>
+							<h4><a target="_blank" href="{{product.url_store}}">{{ product.subtitle }}</a></h4>
 							<div class="code-product">Código descuento : <span>{{ product.code }}</span></div>
 							<small>{{ product.author.get_full_name }}</small>
 						</div>
 						{% if product.image_product  %}
 							<div class="img-list-product">
-								<a href="{{product.url_store}}">
+								<a target="_blank" href="{{product.url_store}}">
 									<img src="{{ product.image_product.url }}">
 								</a>
 							</div>
