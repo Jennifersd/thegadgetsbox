@@ -1,12 +1,10 @@
 /*
-* General CSS
+* General CSS 
 */
 
 /*
-* Backend CSS
+* Backend CSS cambios
 */
-
-
 
 
 /* 
@@ -323,6 +321,38 @@ footer{
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     color: #004863;
+}
+
+.social-link-footer{
+	font-weight: 400;
+    display: inline-block;
+    letter-spacing: .25px;
+    position: absolute;
+    left: 200px;
+}
+
+.social-link-footer span{
+    display: inline-block;
+    padding: 10px 0px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #004863;
+    vertical-align: bottom;
+}
+
+.social-link-footer ul{
+    display: inline-block;
+    padding: 0px;
+    margin: 12px 0px 0px 0px;
+}
+
+.social-link-footer ul li{
+    display: inline-block;
+    width:32px;
+}
+
+.social-link-footer ul li img{
+    width:100%;
 }
 
 
@@ -1412,6 +1442,10 @@ footer{
     transition: background-color 0.5s ease;
     border: none;	
     margin:20px 0px 0px 0px;
+}
+
+.-post-social{
+	display:none;
 }
 
 /* Comming Soon

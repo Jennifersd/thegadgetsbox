@@ -1,6 +1,6 @@
 @media screen and (min-width: 1801px) and (max-width: 1920px){
 
-	/* Home
+	/* Home cambios 
 	*/
 	.hub .-material {
 	    background-position: center 32%, 0 0 !important;
@@ -333,6 +333,10 @@ Tablet CSS
 	
 	._nav-items-footer li:last-child{
 		display:block !important;
+	}
+	
+	.social-link-footer{
+		display:none !important;
 	}
 
 	/* Section 1 - Home
@@ -1044,6 +1048,10 @@ Tablet CSS
 	._nav-items-footer li:last-child{
 		display:block !important;
 	}
+	
+	.social-link-footer{
+		display:none !important;
+	}
 
 	/* Section 1 - Home
 	–––––––––––––––––––––––––––––––––––––––––––––––––– */	
@@ -1408,6 +1416,45 @@ Tablet CSS
 
 	}
 	
+	.-post-social{
+	    display: block !important;
+	    position: fixed;
+	    bottom: 0;
+	    z-index: 9 !important;
+	    background: #fff;
+	    width: 100%;
+	    padding: 3px;
+	    border-top: 1px solid #ccc;
+	}
+	
+	.social-link-post{
+		text-align:center;
+	}
+	
+	.-post-social span{
+		display: inline-block;
+	    padding: 10px 10px 10px 0px;
+	    font-size: 18px;
+	    font-weight: 400;
+	    color: #004863;
+	    vertical-align: bottom;
+	}
+	
+	.-post-social ul{
+	    display: inline-block;
+	    padding: 0px;
+	    margin: 0px;
+	}
+	
+	.-post-social ul li{
+	    display: inline-block;
+	    width:33px;
+	}
+	
+	.-post-social ul li img{
+	    width:100%;
+	}
+
 	/* Comming Soon
 	*/
 	
