@@ -739,6 +739,82 @@ Tablet CSS
 	.ads-google-content{
 		width:90% !important;
 	}
+	
+	/* Productos	
+	*/
+	
+	.block-text-intro-product h1 {
+	    font-size: 28px !important;
+	    line-height: 33px !important;
+	}
+	
+	.block-text-intro-product h2 {
+	    font-size: 18px !important;
+	    line-height: 22px !important;
+	    width: 100% !important;
+	    margin: 20px 0px !important;
+	}
+	
+	.button-products a {
+	    width: 100% !important;
+	    padding: 14px 0px !important;
+	    font-size: 16px !important;
+	    margin-bottom: 15px;
+	}
+	
+	.list-product {
+	    padding: 0px !important;
+	}
+	
+	.list-product li {
+	    -webkit-flex-basis: 29% !important;
+	    flex-basis: 29% !important;
+	    margin: 0px 0px 20px 0px !important;
+	    box-shadow: none !important;
+	    -webkit-box-shadow: none !important;
+	    -moz-box-shadow: none !important;
+	    padding: 15px !important;
+	    max-width: 29% !important;
+	}
+	
+	.titles-list-product {
+	    width: 60% !important;
+	}
+	
+	.img-list-product {
+	    width: 39% !important;
+	}
+	
+	.list-product h4 {
+	    font-size: 14px !important;
+	}
+	
+	.content-list-product {
+	    margin-top: 0px !important;
+	}
+	
+	/* Section Productos
+	*/
+	
+	.list-categories-products li {
+	    width: 100% !important;
+	}	
+	
+	.list-categories-products li a {
+	    text-align: left !important;
+	    text-transform: capitalize !important;
+	    font-weight: bold;
+	    font-size: 18px !important;
+	    line-height: 2.25 !important;
+	    font-weight: 200 !important;
+	    letter-spacing:inherit !important;
+	    border-right: none !important;
+	    border-bottom:1px solid #fff;
+	}
+	
+	.block-product-categories-full h3{
+		display:block !important;
+	}
 		
 }
 
@@ -1494,6 +1570,92 @@ Tablet CSS
 	
 	.ads-google-content{
 		width:90% !important;
+	}
+	
+	/* Productos	
+	*/
+	
+	.block-text-intro-product {
+	    padding-top: 31px !important;
+	}
+		
+	.block-text-intro-product h1 {
+	    font-size: 28px !important;
+	    line-height: 33px !important;
+	    width: 100% !important;
+	}
+	
+	.block-text-intro-product h2{
+	    font-size: 18px !important;
+	    line-height: 22px !important;
+	    width: 100% !important;
+	    margin: 20px 0px !important;
+	}
+	
+	.button-products {
+	    margin: 23px auto 0px auto;
+	    width: 280px !important;
+	    float: none !important;
+	    margin: 0 auto;
+	}
+
+	.button-products a{
+	    width: 100% !important;
+	    padding: 14px 0px !important;
+	    font-size: 16px !important;
+	    margin-bottom: 15px;
+	}
+	
+	.content-list-product {
+	    margin-top: 0px !important;
+	}
+	
+	.store-list {
+	    padding: 0px !important;
+	}
+	
+	.-product-list h3 {
+	    font-size: 25px !important;
+	    line-height: 33px !important;
+	    margin: 15px 0px !important;
+	}
+	
+	.-product-list .text-blog-list {
+    font-size: 18px !important;
+    width: 100% !important;
+}
+	
+	/* Section Productos Categories
+	*/
+	
+	.scrollmenu {
+	    margin-bottom: 10px !important;
+	    margin-left: 16px  !important;
+	    padding: 0px  !important;
+	}
+	
+	.scrollmenu li a {
+	    margin-right: 21px !important;
+	    width: 122px !important;
+	}
+	
+	/* Section Productos List
+	*/
+	
+	.list-product{
+		padding:0px !important;
+	}
+	
+	.list-product li {
+	    -webkit-flex-basis: 100% !important;
+	    flex-basis: 100% !important;
+	    margin: 0px 0px 20px 0px !important;
+	    box-shadow: none !important;
+	    -webkit-box-shadow: none !important;
+	    -moz-box-shadow: none !important;
+	    border-bottom: 1px solid #d8d6d6;
+	    padding: 15px !important;
+	    max-width: 100% !important;
 	}
 }
 
