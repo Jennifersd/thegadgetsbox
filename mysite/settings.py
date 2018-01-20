@@ -25,7 +25,7 @@ SECRET_KEY = '2*@(*8dv08q8vbln@%d9=*xz0#ia(@6(u8ioof_#epk(7-ph4f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['thegadgetsbox.com' , '127.0.0.1' , '178.62.125.104' , '10.211.55.4' , '10.211.55.3' , '10.211.55.5']
+ALLOWED_HOSTS = ['*', 'www.thegadgetsbox.com', 'notchfish.thegadgetsbox.com', 'thegadgetsbox.com' , '127.0.0.1' , '178.62.125.104' , '10.211.55.4' , '10.211.55.3' , '10.211.55.5']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -41,9 +41,12 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'django.contrib.sitemaps',
     'products',
+    'django_hosts',
+    'notchfish',
 ]
 
 MIDDLEWARE_CLASSES = [
+    'django_hosts.middleware.HostsRequestMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -51,9 +54,12 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_hosts.middleware.HostsResponseMiddleware',
 ]
 
 ROOT_URLCONF = 'mysite.urls'
+ROOT_HOSTCONF = 'mysite.hosts'
+DEFAULT_HOST = 'www'
 
 TEMPLATES = [
     {
